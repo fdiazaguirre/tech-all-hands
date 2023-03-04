@@ -1,0 +1,1 @@
+seq 10 | parallel -j10 'printf "GET /fast HTTP/1.1\r\nHost: localhost:8080\r\n\r\n" | nc -v -c localhost 8080'
